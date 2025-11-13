@@ -1,7 +1,7 @@
-import { ToDo } from "./_components/ToDo";
+import { TicTac } from "./_components/TicTac";
 
 const HomePage = () => {
-  return <ToDo />;
+  return <TicTac />;
 };
 
 export default HomePage;

@@ -90,10 +90,23 @@ export const ToDo = () => {
                       }}
                     />
                     <p className="flex-1">{item.text}</p>
-                    <Button className="text-red-500 bg-red-300">Delete</Button>
+                    <Button
+                      onClick={() => {
+                        const newTodos = todos.filter(
+                          (todo) => todo.id !== item.id
+                        );
+                        setTodos(newTodos);
+                      }}
+                    >
+                      Delete
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
+          </div>
+          <div>
+            {todos.filter((todo) => todo.isDone).length} of {todos.length}{" "}
+            completed
           </div>
         </CardContent>
       </Card>
