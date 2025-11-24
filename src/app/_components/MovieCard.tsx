@@ -3,7 +3,7 @@ import { propagateServerField } from "next/dist/server/lib/render-server";
 type MovieCardProps = {
   id: number;
   img: string;
-  name: string;
+  name: string | undefined;
   rate: string;
 };
 

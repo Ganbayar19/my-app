@@ -1,32 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type HeaderProps = {
   id: number;
-  img: string;
+  image: string;
   title: string;
-  rate:string;
+  rate: string;
   desc: string;
 };
 
+// export default function HeaderBanner() {
+//   const [index, setIndex] = useState(0);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % banner.lenght);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+// }
+
 export const Header = (props: HeaderProps) => {
-return(
+  return (
     <div>
-        <img src={props.img}/>
-        <div>{props.title}</div>
+      <img src={props.image} />
+      <div>{props.title}</div>
     </div>
-)
-}
-
-// export const BannerSlide = () =>{
-// const [index, setIndex] = useState(0);
-
-// const nextSlide = () =>{
-//     setIndex((prev)=>(prev + 1 % slides.lenght))
-// }
-
-// const prevSlide = () =>{
-//     set
-// }
-// }
+  );
+};
