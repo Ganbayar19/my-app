@@ -3,7 +3,7 @@
 import { Link } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
-import { MovieDetail } from "./types/MovieDetailTypes";
+import {MovieDetail} from "./MovieDetail"
 
 type MovieSectionProps = {
   categoryName: string;

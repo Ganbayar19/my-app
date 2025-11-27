@@ -16,6 +16,22 @@ export const MovieCard = ({
   vote_avareg,
 }:MovieCardProps) => {
   return(
-    <Link rel="preload"></Link>
+    <Link rel="preload" href={`/movie/${id}`}>
+      <div key={id} className="rounded-lg overflow-hidden">
+        <MovieImg
+        backdrop_path={backdrop_path}
+        title={title}
+        className="aspect-2/3"
+        />
+        <div className="p-3 bg-muted h-27">
+          <div className="flex gap-1 items-center">
+            <Star size={18} strokeWidth={0} fill="#FDE047"/>
+            <p className="text-sm pb-1">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </Link>
   )
 }
